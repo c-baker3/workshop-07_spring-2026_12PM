@@ -91,10 +91,10 @@ ggplot(data = sonadora_sum, # data frame: sonadora_sum
 ```{r}
 #| label: temperature-model
 
-# model
+# model: linear model
 temperature_model <- lm(
   mean_temp_c ~ elevation_m, # formula: response ~ predictor
-  data = sonadora_sum # data frame
+  data = sonadora_sum # data frame: sonadora_sum
   )
 
 ```
@@ -105,8 +105,8 @@ temperature_model <- lm(
 #| label: temperature-diagnostics
 
 # diagnostics
-par(mfrow = c(2, 2))
-plot(temperature_model)
+par(mfrow = c(2, 2)) # displays plot in 2x2 grid
+plot(temperature_model) # displays diagnostics plots model
 
 ```
 
