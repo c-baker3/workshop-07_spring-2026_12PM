@@ -115,6 +115,7 @@ plot(temperature_model) # displays diagnostics plots model
 ```{r}
 #| label: temperature-model-summary
 
+# more information about the model
 summary(temperature_model)
 
 ```
@@ -127,6 +128,7 @@ summary(temperature_model)
 #| label: temperature-model-predictions
 
 # model predictions
+# created new object called temperature_preds 
 temperature_preds <- ggpredict(
   temperature_model,      # model object
   terms = "elevation_m"   # predictor (in quotation marks)
