@@ -148,11 +148,11 @@ ggpredict(
 ```{r}
 #| label: temperature-mode-prediction-visualization
 
-# base layer
-ggplot(data = sonadora_sum, 
+# base layer: ggplot
+ggplot(data = sonadora_sum, # data frame: sonadora_sum
        aes(x = elevation_m,
            y = mean_temp_c)) +
-  # first layer: temperature at each elevation
+  # first layer: points to represent temperature at each elevation
   geom_point() +
   # 95% CI ribbon
   # uses model prediction data frame
@@ -162,7 +162,7 @@ ggplot(data = sonadora_sum,
                   ymin = conf.low,
                   ymax = conf.high),
               alpha = 0.2) +
-  # model prediction line
+  # second layer: model prediction line
   # uses model prediction data frame
   geom_line(data = temperature_preds,
               aes(x = x,
@@ -170,6 +170,7 @@ ggplot(data = sonadora_sum,
   # axis labels
   labs(x = "Elevation (m)",
        y = "Mean temperature (\U00B0 C)") +
+  # changed theme
   theme_bw()
 ```
 
