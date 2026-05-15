@@ -4,7 +4,7 @@ author: "Callie Baker"
 date: "2026-05-15"
 format:
   pdf:
-    toc: true # use this to display a table of contents
+    toc: true # use this to display a clickable table of contents
 execute:
   message: false # use this to make sure messages don't show up
   warning: false # use this to make sure warnings don't show up
@@ -181,12 +181,12 @@ How would you interpret this?
 ggplot(data = abalone_clean,
        aes(x = mean_ph,
            y = change_in_area)) +
-  # first layer: points representing abalones
+  # first layer: points representing abalones (scatter plot)
   geom_point(size = 4,
              stroke = 1,
              fill = "firebrick4",
              shape = 21) +
-  # second layer: ribbon representing confidence interval
+  # second layer: ribbon representing 95% confidence interval
   # using predictions data frame
   geom_ribbon(data = abalone_preds,
               aes(x = x,
@@ -199,10 +199,10 @@ ggplot(data = abalone_clean,
   geom_line(data = abalone_preds,
             aes(x = x,
                 y = predicted)) +
-  # axis labels
+  # updated axis labels
   labs(x = "Mean pH", 
        y = expression("Change in shell area ("*mm^{2}~d^-1*")")) +
-  # theme
+  # changed theme
   theme_minimal()
 ```
 
