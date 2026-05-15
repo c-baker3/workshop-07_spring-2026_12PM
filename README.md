@@ -22,3 +22,5 @@ The `data` folder includes all data files for linear model code.
 
 The rendered output for the abalone linear model is [here](https://github.com/c-baker3/workshop-07_spring-2026_12PM/blob/main/code/abalone-example.pdf).
 
+The rendered output for the elevations linear model is [here](https://github.com/c-baker3/workshop-07_spring-2026_12PM/blob/main/code/sonadora-temperature-example.pdf). 
+
